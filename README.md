@@ -1,2 +1,2 @@
-# react-netflix-clone
+# Wookie movie app
 Created with CodeSandbox
