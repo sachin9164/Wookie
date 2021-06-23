@@ -8,7 +8,7 @@ const baseUrl = "https://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
-  console.log(fetchUrl);
+
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
@@ -17,12 +17,12 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
     fetchData();
   }, [fetchUrl]);
-  console.log(movies);
+
   const handleDragStart = (e) => e.preventDefault();
   const responsive = {
-    0: { items: 1 },
-    568: { items: 2 },
-    1024: { items: 3 }
+    0: { items: 3 },
+    568: { items: 4 },
+    1024: { items: 6 }
   };
   return (
     <div className="row">
@@ -47,7 +47,13 @@ function Row({ title, fetchUrl, isLargeRow }) {
                 alt={movie.name}
                 onDragStart={handleDragStart}
               />
-              <Link to={`${movie.id}`}></Link>
+              <br></br>
+              <Link className="link" to={`${movie.id}`}>
+                <button type="button" class="btn btn-success">
+                  {" "}
+                  Watch▶️
+                </button>
+              </Link>
             </>
           ))}
         </div>

@@ -2,7 +2,7 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  padding: 20px;
+  padding: 40px;
 }
 
 .row__posters::-webkit-scrollbar {
@@ -36,4 +36,9 @@
 
 .row__posterLarge:hover {
   transform: scale(1.09);
+}
+.link {
+  position: relative;
+  top: 250px;
+  left: -140px;
 }
