@@ -1,0 +1,32 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  height: 30px;
+  z-index: 1;
+  display: flex;
+  color: #2f7dfe;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    360deg,
+    transparent,
+    rgba(12, 12, 12, 0.6),
+    #0c0c0c
+  );
+}
+
+.nav__logo {
+  position: fixed;
+  left: 20px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.search {
+  position: left;
+
+  padding-left: 800px;
+  object-fit: contain;
+}
