@@ -1,2 +1,1 @@
-# Wookie movie app
-Created with CodeSandbox
+Movie App
