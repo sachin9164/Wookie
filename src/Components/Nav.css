@@ -28,5 +28,6 @@
   position: left;
 
   padding-left: 800px;
+  padding-top: 10px;
   object-fit: contain;
 }

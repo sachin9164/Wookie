@@ -40,6 +40,11 @@ function SearchedMovies({ title, fetchUrl, isLargeRow }) {
       <br></br>
       <br></br>
       <br></br>
+      <Link to="/logged">
+        <button type="button" className="btn btn-danger">
+          Return to movies
+        </button>
+      </Link>
       <h1>Saerched Results</h1>
       <div className="row">
         <h2>{title}</h2>

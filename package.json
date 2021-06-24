@@ -5,8 +5,10 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "antd": "4.16.5",
     "axios": "0.20.0",
     "emmet": "2.1.4",
+    "immhelper": "1.0.52",
     "prettier": "2.1.2",
     "react": "16.13.1",
     "react-alice-carousel": "2.5.1",
@@ -14,7 +16,10 @@
     "react-items-carousel": "2.8.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.3",
-    "react-slick": "0.28.1"
+    "react-slick": "0.28.1",
+    "react-toastify": "7.0.4",
+    "sha1": "1.1.1",
+    "validator": "13.6.0"
   },
   "devDependencies": {
     "typescript": "3.8.3"

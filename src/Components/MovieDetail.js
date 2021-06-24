@@ -27,17 +27,19 @@ const MovieDetail = () => {
     }
   }, []);
 
-  console.log(movie.genres);
+  console.log(movie);
   return (
     <div class="container">
       {" "}
       <br></br>
       <br></br>
-      <Link to="/">
-        <button type="button" class="btn btn-danger">
-          Return to movies
-        </button>
-      </Link>
+      <div className="logout">
+        <Link to="/logged">
+          <button type="button" className="btn btn-danger">
+            Return to movies
+          </button>
+        </Link>
+      </div>
       <br></br>
       <br></br>
       <div class="row">
@@ -51,9 +53,14 @@ const MovieDetail = () => {
         </div>
         <div class="col">
           {" "}
-          <h2>Title : {movie.original_title}</h2>
-          <h2>Revenue :{movie.budget} </h2>
-          <h4>Thriller</h4>
+          <h2>
+            Title :<b>{movie.original_title}</b>
+          </h2>
+          <h3>Revenue :{movie.budget} </h3>
+          <h5>
+            <b>Populaity</b> : {movie.popularity} |<b> Average</b> :{" "}
+            {movie.vote_average} |<b>Count</b> : {movie.vote_count}
+          </h5>
           <h4>Rating:8.1</h4>
           <h2>Runtime:{movie.runtime} min</h2>
           <h2>Budget : {movie.budget}</h2>

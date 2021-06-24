@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import "./MainPage.css";
 import Row from "./Row";
@@ -7,10 +8,11 @@ import Banner from "./Banner";
 import Nav from "./Nav";
 
 function MainPage() {
+  let history = useHistory();
+
   return (
     <div className="app">
-      <Nav />
-      <Banner />
+      <Nav /> <Banner />
       <Row
         title="WOOKIE ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
