@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Nav.css";
-
+import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Nav() {
+  const [input, setInput] = useState("");
+  let history = useHistory();
+  const handleChange = (e) => {
+    setInput(e.target.value);
+    console.log(input);
+  };
+
+  const onCliked = () => {
+    history.push(`/search/${input}`);
+  };
   return (
     <div className="nav">
       <img
@@ -16,8 +27,14 @@ function Nav() {
             type="search"
             placeholder="Search"
             aria-label="Search"
+            value={input}
+            onChange={handleChange}
           ></input>
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+          <button
+            class="btn btn-outline-primary my-2 my-sm-0"
+            type="submit"
+            onClick={onCliked}
+          >
             Search
           </button>
         </form>

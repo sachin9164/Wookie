@@ -17,9 +17,17 @@ const MovieDetail = () => {
       return request;
     }
     fetchData();
-  }, [q]);
+    async function auth() {
+      const request = await axios.get(
+        `/authentication/session/new?api_key=be4cff6e2207bd4d556b6aa621ac9efa&language=en-US`
+      );
 
-  //console.log(movie.genres);
+      console.log(request.data);
+      return request;
+    }
+  }, []);
+
+  console.log(movie.genres);
   return (
     <div class="container">
       {" "}
